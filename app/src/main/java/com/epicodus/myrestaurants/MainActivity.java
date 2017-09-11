@@ -15,12 +15,14 @@ import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    public static final String TAG = RestaurantsActivity.class.getSimpleName();
     @Bind(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
     @Bind(R.id.locationEditText) EditText mLocationEditText;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.v(TAG, "The OnCreate Method Fired");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -29,6 +31,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAppNameTextView.setTypeface(ostrichFont);
 
         mFindRestaurantsButton.setOnClickListener(this);
+    }
+
+//    @Override
+//    protected void onStart(){
+//        super.onStart();
+//        Log.v(TAG, "The OnStart Method Fired");
+//    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v(TAG, "The OnStart Method Fired");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.v(TAG, "The OnStop Method Fired");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.v(TAG, "The OnDestroy Method Fired");
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.v(TAG, "The OnPostResume Method Fired");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.v(TAG, "The OnPause Method Fired");
     }
 
     @Override

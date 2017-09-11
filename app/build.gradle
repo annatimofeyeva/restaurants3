@@ -24,6 +24,7 @@ android {
         it.buildConfigField 'String', 'YELP_CONSUMER_SECRET', YelpConsumerSecret
         it.buildConfigField 'String', 'YELP_TOKEN', YelpToken
         it.buildConfigField 'String', 'YELP_TOKEN_SECRET', YelpTokenSecret
+        it.buildConfigField 'String', 'STEVES_LAST_NAME', StevesLastName
     }
 
     repositories {
@@ -33,6 +34,8 @@ android {
 }
 
 dependencies {
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'se.akerfeldt:okhttp-signpost:1.1.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
