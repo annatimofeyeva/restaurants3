@@ -71,12 +71,12 @@ public class YelpService {
                     String website = restaurantJSON.getString("url");
                     double rating = restaurantJSON.getDouble("rating");
                     String imageUrl = restaurantJSON.getString("image_url");
-                    double latitude = 33.333;
-                    double longitude = -122.2222;
-                    //double latitude = restaurantJSON.getJSONObject("location")
-                    //        .getJSONObject("coordinate").getDouble("latitude");
-                    //double longitude = restaurantJSON.getJSONObject("location")
-                    //        .getJSONObject("coordinate").getDouble("longitude");
+                    //double latitude = 33.333;
+                    //double longitude = -122.2222;
+                    double latitude = restaurantJSON.getJSONObject("coordinates")
+                            .getDouble("latitude");
+                    double longitude = restaurantJSON.getJSONObject("coordinates")
+                            .getDouble("longitude");
                     ArrayList<String> address = new ArrayList<>();
                     JSONArray addressJSON = restaurantJSON.getJSONObject("location")
                             .getJSONArray("display_address");
