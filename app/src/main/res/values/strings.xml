@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyRestaurants</string>
     <string name="YELP_BASE_URL">https://api.yelp.com/v3/businesses/search?term=food</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
